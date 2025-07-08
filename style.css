@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Great+Vibes&family=Leckerli+One&family=Meie+Script&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+/* Berkshire Swash */ /* Great Vibes */ /* Meie Script */
+/* Leckerli One */ /* Ubuntu */
+
+:root {
+  --primary-color: #dda0dd;
+  --secondry-color: #9370db;
+  --back-color: #f5f5f5;
+  --text-color: #333333;
+  --extension-color: #e6e6fa;
+  --break-color: #d8cfc4;
+  --active-color: #ffc0cb;
+
+  --navbar-height-desktop: 70px;
+  --navbar-height-mobile: 56px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Ubuntu, sans-serif;
+  color: var(--text-color);
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: var(--back-color);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+button {
+  border: none;
+}
+
+/* ======================== The Offer in Header ======================== */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  height: 5vh;
+  font-family: "Ubuntu", "Leckerli One", sans-serif;
+  font-size: 1.1rem;
+  color: #fff;
+  position: relative;
+  font-weight: 900;
+  cursor: default;
+}
+
+/* ========================= Nav Bar ========================= */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--navbar-height-desktop);
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border: 1px solid var(--break-color);
+}
+
+/* Logo */
+nav span {
+  margin-left: 5vw;
+  transition: transform 0.5s ease;
+}
+
+nav span:hover {
+  transform: scale(1.2);
+}
+
+nav span a {
+  font-family: Berkshire Swash;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  text-wrap-mode: nowrap;
+}
+
+/* center Nav Bar */
+nav .nav-center {
+  display: flex;
+  font-weight: 400;
+  gap: 30px;
+}
+
+nav .nav-center li a {
+  transition: color 0.5s ease;
+}
+
+nav .nav-center li a:hover {
+  color: var(--primary-color);
+}
+
+/* Drop Menu from Jewelry button */
+nav .nav-center .jewelry .drop-menu {
+  display: none;
+}
+
+nav .nav-center .jewelry:hover .drop-menu {
+  display: block;
+  position: absolute;
+  background-color: var(--primary-color);
+  border: 1px solid var(--break-color);
+}
+
+nav .nav-center .jewelry .drop-menu ul {
+  display: block;
+  margin: 10px;
+}
+
+nav .nav-center .jewelry .drop-menu ul li {
+  display: flex;
+  text-align: left;
+  width: 200px;
+  padding: 10px;
+  border-bottom: 1px dotted var(--break-color);
+  border-radius: 0;
+  background: transparent;
+}
+
+nav .nav-center .jewelry .drop-menu ul li:last-child {
+  border-bottom: 0;
+}
+
+nav .nav-center .jewelry .drop-menu ul li a {
+  color: var(--back-color);
+  font-weight: 400;
+  transition: 0.5s ease;
+}
+
+nav .nav-center .jewelry .drop-menu ul li a:hover {
+  letter-spacing: 8px;
+  transform: scale(1.1);
+}
+
+/* Scial Media */
+nav .nav-right {
+  margin-right: 5vw;
+  width: 100px;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .nav-right .face-icon {
+  background-image: url("imgs/facebook-black.png");
+  background-size: cover;
+  width: 35px;
+  height: 35px;
+  transition: all 0.5s ease;
+}
+
+nav .nav-right .face-icon:hover {
+  background-image: url("imgs/facebook.png");
+}
+
+nav .nav-right .insta-icon {
+  background-image: url("imgs/instagram-black.png");
+  background-size: cover;
+  width: 35px;
+  height: 35px;
+  transition: all 0.5s ease;
+}
+
+nav .nav-right .insta-icon:hover {
+  background-image: url("imgs/instagram.png");
+}
+
+/* Menu Button in Mobiles*/
+nav .menu {
+  display: none;
+  margin-right: 5vw;
+  z-index: 2;
+}
+
+nav .menu .hamburger {
+  margin-top: 5px;
+  height: 5px;
+  width: 30px;
+  background: var(--primary-color);
+  border-radius: 25% / 85%;
+  transition: all 0.5s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.menu.active li:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+  background: var(--back-color);
+}
+.menu.active li:nth-child(2) {
+  transform: rotate(-45deg);
+  background: var(--back-color);
+}
+.menu.active li:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+  background: var(--back-color);
+}
+
+/* Side Menu in Mobiles */
+.slide {
+  position: fixed;
+  right: -450px;
+  top: 0;
+  width: 300px;
+  height: 100vh;
+  background-color: #dda0ddb4;
+  color: var(--back-color);
+  padding-top: 120px;
+  transition: 0.5s ease;
+  z-index: 1;
+}
+
+.slide.active {
+  right: 0;
+}
+
+.slide ul {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.slide ul li a {
+  color: var(--back-color);
+}
+
+/* ========================== Responsive ========================== */
+@media screen and (max-width: 900px) {
+  header.active {
+    display: none;
+  }
+  nav .nav-center,
+  nav .nav-right {
+    display: none;
+  }
+  nav .menu {
+    display: block;
+  }
+  .slide {
+    padding-top: 70px;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  nav {
+    height: var(--navbar-height-mobile);
+  }
+  nav span:hover {
+    transform: scale(1.15);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  header {
+    font-size: 0.9rem;
+    font-weight: 900;
+  }
+}
