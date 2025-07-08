@@ -110,6 +110,7 @@ nav .nav-center .jewelry .drop-menu {
   display: none;
 }
 
+nav .nav-center .jewelry .drop-menu.active,
 nav .nav-center .jewelry:hover .drop-menu {
   display: block;
   position: absolute;
