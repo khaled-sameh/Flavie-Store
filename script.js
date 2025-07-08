@@ -14,7 +14,7 @@ menu.addEventListener("click", () => {
   }
 });
 
-const buttonJewelry = document.querySelector(".jewelry-btn");
+const buttonJewelry = document.querySelector(".jewelry-a");
 const dropBox = document.querySelector(".drop-menu");
 
 buttonJewelry.addEventListener("click", () => {
