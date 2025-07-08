@@ -13,3 +13,16 @@ menu.addEventListener("click", () => {
     slide.classList.add("active");
   }
 });
+
+const buttonJewelry = document.querySelector(".jewelry-btn");
+const dropBox = document.querySelector(".drop-menu");
+
+buttonJewelry.addEventListener("click", () => {
+  if (buttonJewelry.classList.contains("active")) {
+    buttonJewelry.classList.remove("active");
+    dropBox.classList.remove("active");
+  } else {
+    buttonJewelry.classList.add("active");
+    dropBox.classList.add("active");
+  }
+});
