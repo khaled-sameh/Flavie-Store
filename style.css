@@ -70,6 +70,7 @@ nav {
   width: 100%;
   font-size: 1.5rem;
   font-weight: 600;
+  background-color: var(--back-color);
   border: 1px solid var(--break-color);
 }
 
