@@ -326,7 +326,7 @@ nav .menu .hamburger {
   gap: 30px;
 }
 
-.container-2 .border-imgs .btns {
+.btns {
   font-size: 1.2rem;
   font-weight: 700;
   color: var(--back-color);
@@ -367,6 +367,74 @@ nav .menu .hamburger {
 }
 .container-2 .img6 {
   background-image: url("imgs/wallet-purple.png");
+}
+
+/* ======================== Container 3 ======================== */
+.container-3 {
+  text-align: center;
+  background-color: var(--primary-color);
+  padding: 2vw;
+}
+
+.container-3 .section-text {
+  width: 100%;
+  height: 120px;
+  margin-bottom: 40px;
+}
+
+.container-3 .section-text h2 {
+  font-size: 3.5rem;
+}
+
+.container-3 .section-text span {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.container-3 .section-imgs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 80px;
+}
+
+.container-3 .section-imgs .new-frames {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: var(--back-color);
+  width: 350px;
+  height: 400px;
+  position: relative;
+}
+
+.container-3 .section-imgs .last-frame {
+  display: none;
+}
+
+.section-imgs .new-frames .new-product-text {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--back-color);
+  border: 1px solid var(--text-color);
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  font-size: 0.8rem;
+}
+
+.container-3 .timp {
+  background-color: #333333;
+  border-radius: 10px;
+  width: 100%;
+  height: 50%;
 }
 
 /* ========================== Responsive ========================== */
@@ -422,5 +490,65 @@ nav .menu .hamburger {
   .container-1 .welcome-text {
     min-width: 300px;
     height: auto;
+  }
+}
+
+/* Responsive containet 3 */
+@media screen and (max-width: 1260px) {
+  .container-3 {
+    padding: 8vw;
+  }
+
+  .container-3 .section-imgs .last-frame {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .container-3 {
+    padding: 8vw;
+  }
+  .container-3 .section-text span {
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+  .container-3 .section-imgs .last-frame {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .container-3 {
+    padding: 12vw;
+  }
+
+  .container-3 .section-text {
+    height: 150px;
+    margin: 0;
+  }
+
+  .container-3 .section-text h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+
+  .container-3 .section-text span {
+    font-size: 1.2rem;
+  }
+
+  .container-3 .section-imgs .new-frames {
+    gap: 10px;
+    padding: 15px;
+    width: 250px;
+    height: 300px;
+  }
+
+  .section-imgs .new-frames .new-product-text {
+    width: 70px;
+    height: 70px;
+    font-size: 0.7rem;
   }
 }
