@@ -307,6 +307,69 @@ nav .menu .hamburger {
   padding: 10px 50px;
 }
 
+/* ======================== Container 2 ======================== */
+.container-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  padding: 10vw;
+}
+
+.container-2 .border-imgs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: auto;
+  max-width: 250px;
+  gap: 30px;
+}
+
+.container-2 .border-imgs .btns {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--back-color);
+  background-color: var(--primary-color);
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: 0.5s ease;
+}
+
+.container-2 .border-imgs .btns:hover {
+  background-color: var(--secondry-color);
+}
+
+.container-2 .container-2-imgs {
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  background-clip: content-box;
+}
+
+.container-2 .img1 {
+  background-image: url("imgs/Necklace.jpg");
+}
+.container-2 .img2 {
+  background-image: url("imgs/bracelet.jpg");
+}
+.container-2 .img3 {
+  background-image: url("imgs/Ring.jpg");
+}
+.container-2 .img4 {
+  background-image: url("imgs/Earring.jpg");
+}
+.container-2 .img5 {
+  background-image: url("imgs/metal-watch.jpg");
+}
+.container-2 .img6 {
+  background-image: url("imgs/wallet-purple.png");
+}
+
 /* ========================== Responsive ========================== */
 
 /* Responsive Nav Bar*/
