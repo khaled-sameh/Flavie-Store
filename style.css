@@ -437,6 +437,63 @@ nav .menu .hamburger {
   height: 50%;
 }
 
+/* ======================== Container 4 ======================== */
+.container-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.container-4 .best-text,
+.container-4 .best-imgs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  min-width: 450px;
+  height: 350px;
+}
+
+.container-4 .best-text {
+  flex-direction: column;
+  gap: 20px;
+  padding: 5vw;
+  padding-right: 0;
+  cursor: default;
+}
+
+.container-4 .best-text h2 {
+  font-size: 3rem;
+  width: 100%;
+}
+
+.container-4 .best-text span {
+  font-size: 1.1rem;
+  padding-right: 10vw;
+}
+
+.container-4 .best-imgs {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.container-4 .best-imgs .best-frames {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  height: 200px;
+  width: 200px;
+}
+
+.container-4 .best-imgs .best-frames .best-img {
+  background-color: #333333;
+  width: 100%;
+  height: 60%;
+}
+
 /* ========================== Responsive ========================== */
 
 /* Responsive Nav Bar*/
@@ -550,5 +607,57 @@ nav .menu .hamburger {
     width: 70px;
     height: 70px;
     font-size: 0.7rem;
+  }
+}
+
+/* Responsive Container 4 */
+@media screen and (max-width: 960px) {
+  .container-4 .best-text h2 {
+    font-size: 2.5rem;
+  }
+
+  .container-4 .best-text span {
+    padding-right: 50px;
+  }
+}
+
+@media screen and (max-width: 915px) {
+  .container-4 {
+    padding-bottom: 20px;
+  }
+
+  .container-4 .best-text {
+    height: 200px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .container-4 .best-imgs {
+    width: 100%;
+    height: 250px;
+    padding-top: 20px;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .container-4 .best-text,
+  .container-4 .best-imgs {
+    min-width: 250px;
+  }
+
+  .container-4 .best-text h2 {
+    font-size: 2rem;
+  }
+
+  .container-4 .best-text span {
+    font-size: 0.8rem;
+  }
+
+  .container-4 .best-imgs {
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    padding: 0;
+    gap: 30px;
   }
 }
