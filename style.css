@@ -23,7 +23,7 @@
 }
 
 html {
-  font-family: Ubuntu, sans-serif;
+  font-family: Ubuntu, Leckerli One, sans-serif;
   color: var(--text-color);
 }
 
@@ -53,7 +53,6 @@ header {
   align-items: center;
   background-color: var(--primary-color);
   height: 30px;
-  font-family: "Ubuntu", "Leckerli One", sans-serif;
   font-size: 1.1rem;
   color: #fff;
   position: relative;
