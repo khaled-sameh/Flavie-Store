@@ -74,20 +74,17 @@ nav {
 }
 
 /* Logo */
-nav span {
-  margin-left: 5vw;
+nav .logo-nav {
+  margin-left: clamp(5px, 5vw, 10rem);
   transition: transform 0.5s ease;
 }
 
-nav span:hover {
+nav .logo-nav:hover {
   transform: scale(1.2);
 }
 
-nav span a {
-  font-family: Berkshire Swash;
-  font-size: 2.5rem;
-  color: var(--primary-color);
-  text-wrap-mode: nowrap;
+nav .logo-nav img {
+  height: clamp(2rem, 10vw, 3.5rem);
 }
 
 /* center Nav Bar */
@@ -150,36 +147,49 @@ nav .nav-center .jewelry .drop-menu ul li a:hover {
 
 /* Scial Media */
 nav .nav-right {
-  margin-right: 5vw;
-  width: 100px;
-  height: 70px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  gap: 40px;
 }
 
-nav .nav-right .face-icon {
-  background-image: url("imgs/facebook-black.png");
-  background-size: cover;
-  width: 35px;
-  height: 35px;
-  transition: all 0.5s ease;
+nav .nav-right a {
+  position: relative;
+  padding-right: clamp(0.1rem, 1.5vw, 1.5rem);
+  margin: 0;
 }
 
-nav .nav-right .face-icon:hover {
-  background-image: url("imgs/facebook.png");
+nav .nav-right .face-icon img {
+  height: 50px;
 }
 
-nav .nav-right .insta-icon {
-  background-image: url("imgs/instagram-black.png");
-  background-size: cover;
-  width: 35px;
-  height: 35px;
-  transition: all 0.5s ease;
+nav .nav-right .face-icon .hover {
+  position: absolute;
+  top: -25px;
+  left: 0;
+  opacity: 0;
+  transition: opacity, transform 0.5s ease-in-out;
 }
 
-nav .nav-right .insta-icon:hover {
-  background-image: url("imgs/instagram.png");
+nav .nav-right .face-icon .hover:hover {
+  opacity: 1;
+  transform: scale(1.2);
+  background-color: var(--back-color);
+}
+
+nav .nav-right .insta-icon img {
+  height: 50px;
+}
+
+nav .nav-right .insta-icon .hover {
+  position: absolute;
+  top: -25px;
+  left: 0;
+  opacity: 0;
+  transition: opacity, transform 0.5s ease-in-out;
+}
+
+nav .nav-right .insta-icon .hover:hover {
+  opacity: 1;
+  transform: scale(1.2);
+  background-color: var(--back-color);
 }
 
 /* Menu Button in Mobiles*/
@@ -276,11 +286,12 @@ nav .menu .hamburger {
 .container-1 .welcome-text h1 {
   color: var(--primary-color);
   font-size: 2.5rem;
-  margin-bottom: 10px;
 }
 
-.container-1 .welcome-text h1 span {
-  font-family: Berkshire Swash;
+.container-1 .welcome-text img {
+  height: clamp(40px, 70px, 80px);
+  margin-top: -15px;
+  margin-left: -17px;
 }
 
 .container-1 .welcome-text p {
@@ -601,7 +612,7 @@ footer a {
 /* ========================== Responsive ========================== */
 
 /* Responsive Nav Bar*/
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 945px) {
   header.active {
     display: none;
   }
@@ -620,9 +631,6 @@ footer a {
 @media screen and (max-width: 770px) {
   nav {
     height: var(--navbar-height-mobile);
-  }
-  nav span:hover {
-    transform: scale(1.15);
   }
 }
 
@@ -744,6 +752,10 @@ footer a {
 }
 
 @media screen and (max-width: 450px) {
+  .container-4 {
+    padding: 20px;
+  }
+
   .container-4 .best-text,
   .container-4 .best-imgs {
     min-width: 250px;
@@ -759,12 +771,13 @@ footer a {
 
   .container-4 .best-imgs {
     align-items: center;
-    flex-direction: column;
     height: auto;
     padding: 0;
-    gap: 30px;
+    margin-bottom: 40px;
+    gap: 20px;
   }
 }
+
 /* Responsive Footer */
 @media screen and (max-width: 900px) {
   .footer-logo {
