@@ -452,7 +452,8 @@ nav .menu .hamburger {
   align-items: center;
   flex: 1;
   min-width: 450px;
-  height: 350px;
+  height: 50vw;
+  max-height: 400px;
 }
 
 .container-4 .best-text {
